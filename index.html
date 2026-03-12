@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skyline Sprint — Платформер</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Spline+Sans+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="layout">
+    <header class="header">
+      <div>
+        <h1>Skyline Sprint</h1>
+        <p>Платформер на Canvas: прыгай, собирай монеты, дойди до флага.</p>
+      </div>
+      <div class="controls">
+        <button id="btnStart">Старт</button>
+        <button id="btnPause">Пауза</button>
+        <button id="btnRestart">Рестарт</button>
+      </div>
+    </header>
+
+    <section class="game-wrap">
+      <canvas id="game" width="960" height="540" aria-label="Игра"></canvas>
+      <div class="hud" id="hud">
+        <div>Счет: <span id="score">0</span></div>
+        <div>Уровень: <span id="level">1</span></div>
+        <div>Монеты: <span id="coins">0/0</span></div>
+        <div>Здоровье: <span id="health">3</span></div>
+        <div>Время: <span id="time">0.0</span> с</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Управление</h2>
+      <div class="keys">
+        <div><span class="key">A</span> / <span class="key">←</span> — влево</div>
+        <div><span class="key">D</span> / <span class="key">→</span> — вправо</div>
+        <div><span class="key">W</span> / <span class="key">Space</span> — прыжок</div>
+        <div><span class="key">P</span> — пауза</div>
+        <div><span class="key">R</span> — рестарт</div>
+      </div>
+      <p class="note">Подсказка: монеты дают очки, шипы снимают здоровье. Дойди до флага, чтобы завершить уровень.</p>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
